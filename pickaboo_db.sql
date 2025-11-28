@@ -19,3 +19,15 @@ CREATE TABLE categories (
     category_name VARCHAR(100)
 );
 
+CREATE TABLE products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    brand_id INT,
+    category_id INT,
+    product_name VARCHAR(150),
+    price DECIMAL(10,2),
+    stock INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (brand_id) REFERENCES brands(brand_id),
+    FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);
+
