@@ -121,3 +121,25 @@ INSERT INTO categories (category_name) VALUES
 ('Storage Devices'),
 ('Power Banks'),
 ('Drones');
+
+INSERT INTO products (brand_id, category_id, product_name, price, stock) VALUES
+(1, 1, 'Samsung Galaxy S23', 95000.00, 50),
+(2, 1, 'iPhone 15', 160000.00, 40),
+(3, 1, 'Xiaomi Redmi Note 13', 20000.00, 100),
+(4, 2, 'HP Pavilion 15', 75000.00, 30),
+(5, 2, 'Dell Inspiron 14', 70000.00, 25),
+(6, 2, 'Lenovo IdeaPad 3', 65000.00, 20),
+(7, 2, 'Asus TUF Gaming A16', 120000.00, 15),
+(8, 4, 'Sony Bravia 55-inch', 90000.00, 10),
+(9, 4, 'LG OLED 48-inch', 110000.00, 12),
+(10, 5, 'Canon EOS 250D', 65000.00, 8),
+(11, 5, 'Nikon D3500', 60000.00, 5),
+(12, 6, 'Sony WH-1000XM5', 35000.00, 25),
+(13, 6, 'Bose QuietComfort 45', 40000.00, 20),
+(14, 7, 'JBL Flip 6', 8000.00, 50),
+(15, 10, 'Apple iPad 10th Gen', 75000.00, 18),
+(16, 11, 'Samsung Galaxy Watch 6', 25000.00, 30),
+(17, 12, 'Sony PlayStation 5', 85000.00, 10),
+(18, 13, 'Logitech MX Master 3', 15000.00, 40),
+(19, 19, 'Anker PowerCore 26800', 6000.00, 60),
+(20, 20, 'DJI Mini 3 Pro', 120000.00, 5);
