@@ -8,3 +8,9 @@ CREATE TABLE customers (
     address VARCHAR(150),
     district VARCHAR(50)
 );
+use pickabo_db;
+CREATE TABLE brands (
+    brand_id INT AUTO_INCREMENT PRIMARY KEY,
+    brand_name VARCHAR(100)
+);
+
