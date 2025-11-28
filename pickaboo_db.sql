@@ -99,3 +99,25 @@ INSERT INTO brands (brand_name) VALUES
 ('Panasonic'),
 ('Huawei'),
 ('Motorola');
+
+INSERT INTO categories (category_name) VALUES
+('Smartphones'),
+('Laptops'),
+('Desktops'),
+('Televisions'),
+('Cameras'),
+('Headphones'),
+('Speakers'),
+('Printers'),
+('Monitors'),
+('Tablets'),
+('Smart Watches'),
+('Gaming Consoles'),
+('Accessories'),
+('Networking'),
+('Home Appliances'),
+('Projectors'),
+('Software'),
+('Storage Devices'),
+('Power Banks'),
+('Drones');
