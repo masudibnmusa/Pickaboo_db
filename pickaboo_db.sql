@@ -37,3 +37,11 @@ CREATE TABLE product_images (
     image_url VARCHAR(255),
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
+
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    total_amount DECIMAL(10,2),
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
