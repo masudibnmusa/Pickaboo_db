@@ -143,3 +143,25 @@ INSERT INTO products (brand_id, category_id, product_name, price, stock) VALUES
 (18, 13, 'Logitech MX Master 3', 15000.00, 40),
 (19, 19, 'Anker PowerCore 26800', 6000.00, 60),
 (20, 20, 'DJI Mini 3 Pro', 120000.00, 5);
+
+INSERT INTO product_images (product_id, image_url) VALUES
+(1, 'images/samsung_s23.jpg'),
+(2, 'images/iphone15.jpg'),
+(3, 'images/redmi_note13.jpg'),
+(4, 'images/hp_pavilion15.jpg'),
+(5, 'images/dell_inspiron14.jpg'),
+(6, 'images/lenovo_ideapad3.jpg'),
+(7, 'images/asus_tuf_a16.jpg'),
+(8, 'images/sony_bravia55.jpg'),
+(9, 'images/lg_oled48.jpg'),
+(10, 'images/canon_eos250d.jpg'),
+(11, 'images/nikon_d3500.jpg'),
+(12, 'images/sony_wh1000xm5.jpg'),
+(13, 'images/bose_qc45.jpg'),
+(14, 'images/jbl_flip6.jpg'),
+(15, 'images/ipad10.jpg'),
+(16, 'images/galaxy_watch6.jpg'),
+(17, 'images/ps5.jpg'),
+(18, 'images/logitech_mx3.jpg'),
+(19, 'images/anker_powercore.jpg'),
+(20, 'images/dji_mini3pro.jpg');
