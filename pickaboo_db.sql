@@ -77,3 +77,25 @@ INSERT INTO customers (name, email, phone, address, district) VALUES
 ('Foysal Ahmed', 'foysal@example.com', '01710000018', 'Cox’s Bazar', 'Cox’s Bazar'),
 ('Azizur Rahman', 'azizur@example.com', '01710000019', 'Tangail', 'Tangail'),
 ('Hasan Mahmud', 'hasan@example.com', '01710000020', 'Bogra', 'Bogra');
+
+INSERT INTO brands (brand_name) VALUES
+('Samsung'),
+('Apple'),
+('Xiaomi'),
+('HP'),
+('Dell'),
+('Lenovo'),
+('Asus'),
+('Sony'),
+('LG'),
+('Oppo'),
+('Vivo'),
+('Canon'),
+('Nikon'),
+('Microsoft'),
+('OnePlus'),
+('Realme'),
+('Acer'),
+('Panasonic'),
+('Huawei'),
+('Motorola');
