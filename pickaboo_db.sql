@@ -215,3 +215,8 @@ SELECT o.order_id, c.name, o.order_date
 FROM orders o
 JOIN customers c ON o.customer_id = c.customer_id;
 
+use pickabo_db;
+SELECT oi.order_item_id, p.product_name, oi.quantity, oi.price
+FROM order_items oi
+JOIN products p ON oi.product_id = p.product_id;
+
