@@ -228,3 +228,7 @@ SELECT p.product_name, c.category_name
 FROM products p
 JOIN categories c ON p.category_id = c.category_id;
 
+SELECT o.order_id, c.name, o.total_amount
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id;
+
