@@ -268,3 +268,8 @@ SELECT p.product_name, pi.image_url
 FROM products p
 JOIN product_images pi ON p.product_id = pi.product_id;
 
+SELECT c.name, o.order_id, o.order_date
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE YEAR(o.order_date) > 2024;
+
