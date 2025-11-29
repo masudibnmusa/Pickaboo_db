@@ -264,3 +264,7 @@ FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 GROUP BY c.name;
 
+SELECT p.product_name, pi.image_url
+FROM products p
+JOIN product_images pi ON p.product_id = pi.product_id;
+
