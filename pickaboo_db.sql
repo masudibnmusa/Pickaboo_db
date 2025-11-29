@@ -209,3 +209,9 @@ INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
 (18, 18, 1, 15000.00),
 (19, 19, 1, 6000.00),
 (20, 20, 1, 120000.00);
+
+
+SELECT o.order_id, c.name, o.order_date
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id;
+
