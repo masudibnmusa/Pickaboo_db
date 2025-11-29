@@ -244,3 +244,8 @@ SELECT c.name, o.order_id
 FROM customers c
 LEFT JOIN orders o ON c.customer_id = o.customer_id;
 
+SELECT p.product_name, oi.order_id
+FROM products p
+LEFT JOIN order_items oi ON p.product_id = oi.product_id
+WHERE oi.order_id IS NULL;
+
