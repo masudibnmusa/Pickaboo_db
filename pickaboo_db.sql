@@ -240,3 +240,7 @@ SELECT DISTINCT c.name
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id;
 
+SELECT c.name, o.order_id
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id;
+
