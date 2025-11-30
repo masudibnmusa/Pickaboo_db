@@ -320,3 +320,6 @@ WHERE stock < 10;
 
 SELECT * FROM customers
 ORDER BY name ASC;
+
+SELECT * FROM products
+WHERE price BETWEEN 1000 AND 3000;
