@@ -279,3 +279,9 @@ SELECT c.category_name, COUNT(p.product_id) AS product_count
 FROM categories c
 LEFT JOIN products p ON c.category_id = p.category_id
 GROUP BY c.category_name;
+
+SELECT p.product_name, SUM(oi.quantity) AS sold_units
+FROM products p
+JOIN order_items oi ON p.product_id = oi.product_id
+GROUP BY p.product_name
+ORDER BY sold_units DESC;
