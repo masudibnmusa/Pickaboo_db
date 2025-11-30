@@ -273,3 +273,9 @@ FROM orders o
 JOIN customers c ON o.customer_id = c.customer_id
 WHERE YEAR(o.order_date) > 2024;
 
+use pickabo_db;
+
+SELECT c.category_name, COUNT(p.product_id) AS product_count
+FROM categories c
+LEFT JOIN products p ON c.category_id = p.category_id
+GROUP BY c.category_name;
