@@ -317,3 +317,6 @@ WHERE price < 500;
 SELECT product_name, stock
 FROM products
 WHERE stock < 10;
+
+SELECT * FROM customers
+ORDER BY name ASC;
