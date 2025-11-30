@@ -313,3 +313,7 @@ WHERE o.order_date = (
 
 SELECT * FROM products
 WHERE price < 500;
+
+SELECT product_name, stock
+FROM products
+WHERE stock < 10;
