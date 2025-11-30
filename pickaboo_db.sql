@@ -301,3 +301,12 @@ FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id;
+
+SELECT c.name, o.order_id, o.order_date
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+WHERE o.order_date = (
+    SELECT MAX(order_date)
+    FROM orders
+    WHERE customer_id = c.customer_id
+);
