@@ -329,3 +329,6 @@ FROM customers;
 
 SELECT AVG(price) AS avg_price
 FROM products;
+
+SELECT SUM(stock) AS total_stock
+FROM products;
