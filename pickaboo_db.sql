@@ -335,3 +335,6 @@ FROM products;
 
 SELECT SUM(stock) AS total_stock
 FROM products;
+
+SELECT MAX(price) AS max_price
+FROM products;
