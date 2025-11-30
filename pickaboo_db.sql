@@ -326,3 +326,6 @@ WHERE price BETWEEN 1000 AND 3000;
 
 SELECT COUNT(*) AS total_customers
 FROM customers;
+
+SELECT AVG(price) AS avg_price
+FROM products;
