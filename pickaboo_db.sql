@@ -310,3 +310,6 @@ WHERE o.order_date = (
     FROM orders
     WHERE customer_id = c.customer_id
 );
+
+SELECT * FROM products
+WHERE price < 500;
