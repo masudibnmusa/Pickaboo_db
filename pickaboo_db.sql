@@ -352,3 +352,24 @@ VALUES
 (@new_order_id, 5, 1, 900);
 
 COMMIT;
+
+START TRANSACTION;
+
+-- check stock
+SELECT stock INTO @stock
+FROM products
+WHERE product_id = 2;
+
+IF @stock < 3 THEN
+    ROLLBACK;
+ELSE
+    UPDATE products
+    SET stock = stock - 3
+    WHERE product_id = 2;
+
+    INSERT INTO order_items (order_id, product_id, quantity, price)
+    VALUES (10, 2, 3, 350);
+
+    COMMIT;
+END IF;
+
