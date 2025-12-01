@@ -373,3 +373,13 @@ ELSE
     COMMIT;
 END IF;
 
+START TRANSACTION;
+
+UPDATE products
+SET price = 1200
+WHERE product_id = 6;
+
+INSERT INTO price_logs (product_id, old_price, new_price, changed_at)
+VALUES (6, 1000, 1200, NOW());
+
+COMMIT;
