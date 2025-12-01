@@ -526,5 +526,8 @@ JOIN orders o ON p.order_id = o.order_id;
 SELECT * FROM payments
 WHERE payment_status = 'Completed';
 
+SELECT * FROM payments
+WHERE payment_status IN ('Pending', 'Failed');
+
 
 
