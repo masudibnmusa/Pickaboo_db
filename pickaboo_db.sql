@@ -399,3 +399,15 @@ DELETE FROM order_items WHERE order_id = 15;
 DELETE FROM orders WHERE order_id = 15;
 
 COMMIT;
+
+START TRANSACTION;
+
+UPDATE customers
+SET email = 'newmail@gmail.com'
+WHERE customer_id = 3;
+
+UPDATE customers
+SET phone = '01700000000'
+WHERE customer_id = 3;
+
+COMMIT;
