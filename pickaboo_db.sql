@@ -383,3 +383,19 @@ INSERT INTO price_logs (product_id, old_price, new_price, changed_at)
 VALUES (6, 1000, 1200, NOW());
 
 COMMIT;
+
+START TRANSACTION;
+
+-- Restore stock
+UPDATE products p
+JOIN order_items oi ON p.product_id = oi.product_id
+SET p.stock = p.stock + oi.quantity
+WHERE oi.order_id = 15;
+
+-- Delete order items
+DELETE FROM order_items WHERE order_id = 15;
+
+-- Delete order
+DELETE FROM orders WHERE order_id = 15;
+
+COMMIT;
