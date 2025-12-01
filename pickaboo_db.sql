@@ -431,3 +431,13 @@ SET price = price + 500
 WHERE product_id = 4;
 
 ROLLBACK;
+
+CREATE TABLE payments (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    amount DECIMAL(10,2) NOT NULL,
+    payment_method VARCHAR(50),    -- e.g., 'Credit Card', 'Bkash', 'Nagad', 'Cash'
+    payment_status VARCHAR(20),    -- e.g., 'Pending', 'Completed', 'Failed'
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);
