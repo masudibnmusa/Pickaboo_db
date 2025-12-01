@@ -441,3 +441,27 @@ CREATE TABLE payments (
     payment_status VARCHAR(20),    -- e.g., 'Pending', 'Completed', 'Failed'
     FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
+
+INSERT INTO payments (payment_id, order_id, amount, payment_method, payment_status) VALUES
+(1, 1, 1200, 'Credit Card', 'Completed'),
+(21, 2, 400, 'Bkash', 'Completed'),
+(3, 3, 1500, 'Nagad', 'Completed'),
+(4, 4, 900, 'Cash', 'Completed'),
+(5, 5, 10, 'Bkash', 'Completed'),
+(6, 6, 20, 'Credit Card', 'Completed'),
+(7, 7, 120, 'Nagad', 'Completed'),
+(8, 8, 200, 'Cash', 'Completed'),
+(9, 9, 50, 'Bkash', 'Completed'),
+(10, 10, 600, 'Credit Card', 'Completed'),
+(11, 11, 15, 'Nagad', 'Completed'),
+(12, 12, 80, 'Bkash', 'Completed'),
+(13, 13, 700, 'Credit Card', 'Completed'),
+(14, 14, 25, 'Cash', 'Completed'),
+(15, 15, 35, 'Bkash', 'Completed'),
+(16, 16, 12, 'Credit Card', 'Completed'),
+(17, 17, 8, 'Nagad', 'Completed'),
+(18, 18, 250, 'Cash', 'Completed'),
+(19, 19, 20, 'Bkash', 'Completed'),
+(20, 20, 40, 'Credit Card', 'Completed');
+
+SELECT order_id FROM orders;
