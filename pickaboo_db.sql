@@ -423,3 +423,11 @@ SET stock = stock + 5
 WHERE product_id = 2;
 
 COMMIT;
+
+START TRANSACTION;
+
+UPDATE products
+SET price = price + 500
+WHERE product_id = 4;
+
+ROLLBACK;
