@@ -519,4 +519,8 @@ INSERT INTO payments (order_id, amount, payment_method, payment_status) VALUES
 (19, 20, 'Bkash', 'Completed'),
 (20, 40, 'Credit Card', 'Completed');
 
+SELECT p.payment_id, p.order_id, p.amount, p.payment_method, p.payment_status, o.total_amount
+FROM payments p
+JOIN orders o ON p.order_id = o.order_id;
+
 
