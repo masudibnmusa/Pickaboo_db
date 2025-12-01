@@ -411,3 +411,15 @@ SET phone = '01700000000'
 WHERE customer_id = 3;
 
 COMMIT;
+
+START TRANSACTION;
+
+UPDATE products
+SET stock = stock - 5
+WHERE product_id = 1;
+
+UPDATE products
+SET stock = stock + 5
+WHERE product_id = 2;
+
+COMMIT;
