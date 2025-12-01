@@ -338,3 +338,17 @@ FROM products;
 
 SELECT MAX(price) AS max_price
 FROM products;
+
+START TRANSACTION;
+
+INSERT INTO orders (customer_id, total_amount)
+VALUES (1, 1500);
+
+SET @new_order_id = LAST_INSERT_ID();
+
+INSERT INTO order_items (order_id, product_id, quantity, price)
+VALUES 
+(@new_order_id, 3, 2, 300),
+(@new_order_id, 5, 1, 900);
+
+COMMIT;
