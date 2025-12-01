@@ -497,4 +497,26 @@ INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
 (19,19,1, 20),
 (20,20,1, 40);
 
+INSERT INTO payments (order_id, amount, payment_method, payment_status) VALUES
+(1, 1200, 'Credit Card', 'Completed'),
+(2, 400, 'Bkash', 'Completed'),
+(3, 1500, 'Nagad', 'Completed'),
+(4, 900, 'Cash', 'Completed'),
+(5, 10, 'Bkash', 'Completed'),
+(6, 20, 'Credit Card', 'Completed'),
+(7, 120, 'Nagad', 'Completed'),
+(8, 200, 'Cash', 'Completed'),
+(9, 50, 'Bkash', 'Completed'),
+(10, 600, 'Credit Card', 'Completed'),
+(11, 15, 'Nagad', 'Completed'),
+(12, 80, 'Bkash', 'Completed'),
+(13, 700, 'Credit Card', 'Completed'),
+(14, 25, 'Cash', 'Completed'),
+(15, 35, 'Bkash', 'Completed'),
+(16, 12, 'Credit Card', 'Completed'),
+(17, 8, 'Nagad', 'Completed'),
+(18, 250, 'Cash', 'Completed'),
+(19, 20, 'Bkash', 'Completed'),
+(20, 40, 'Credit Card', 'Completed');
+
 
