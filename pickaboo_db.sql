@@ -523,4 +523,8 @@ SELECT p.payment_id, p.order_id, p.amount, p.payment_method, p.payment_status, o
 FROM payments p
 JOIN orders o ON p.order_id = o.order_id;
 
+SELECT * FROM payments
+WHERE payment_status = 'Completed';
+
+
 
