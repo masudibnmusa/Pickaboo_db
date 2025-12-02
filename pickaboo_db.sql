@@ -543,5 +543,9 @@ FROM products p
 JOIN brands b ON p.brand_id = b.brand_id
 JOIN categories c ON p.category_id = c.category_id;
 
+SELECT p.product_name, oi.order_id, oi.quantity
+FROM products p
+LEFT JOIN order_items oi ON p.product_id = oi.product_id;
+
 
 
