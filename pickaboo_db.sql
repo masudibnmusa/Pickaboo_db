@@ -551,5 +551,10 @@ SELECT c.name, o.order_id, o.total_amount
 FROM customers c
 LEFT JOIN orders o ON c.customer_id = o.customer_id;
 
+SELECT c.category_name, COUNT(p.product_id) AS product_count
+FROM categories c
+LEFT JOIN products p ON c.category_id = p.category_id
+GROUP BY c.category_name;
+
 
 
