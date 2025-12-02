@@ -529,5 +529,9 @@ WHERE payment_status = 'Completed';
 SELECT * FROM payments
 WHERE payment_status IN ('Pending', 'Failed');
 
+SELECT o.order_id, c.name, o.total_amount, o.order_date
+FROM orders o
+INNER JOIN customers c ON o.customer_id = c.customer_id;
+
 
 
