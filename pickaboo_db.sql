@@ -533,5 +533,10 @@ SELECT o.order_id, c.name, o.total_amount, o.order_date
 FROM orders o
 INNER JOIN customers c ON o.customer_id = c.customer_id;
 
+SELECT o.order_id, p.product_name, oi.quantity, oi.price
+FROM orders o
+INNER JOIN order_items oi ON o.order_id = oi.order_id
+INNER JOIN products p ON oi.product_id = p.product_id;
+
 
 
