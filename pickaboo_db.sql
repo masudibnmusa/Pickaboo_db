@@ -547,5 +547,9 @@ SELECT p.product_name, oi.order_id, oi.quantity
 FROM products p
 LEFT JOIN order_items oi ON p.product_id = oi.product_id;
 
+SELECT c.name, o.order_id, o.total_amount
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id;
+
 
 
