@@ -573,6 +573,11 @@ JOIN order_items oi ON p.product_id = oi.product_id
 GROUP BY p.product_name
 ORDER BY total_sold DESC;
 
+SELECT p.payment_id, c.name, o.order_id, p.amount, p.payment_method
+FROM payments p
+JOIN orders o ON p.order_id = o.order_id
+JOIN customers c ON o.customer_id = c.customer_id;
+
 
 
 
