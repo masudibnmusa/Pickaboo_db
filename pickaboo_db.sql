@@ -622,4 +622,15 @@ SELECT
 FROM order_items oi
 JOIN products p ON oi.product_id = p.product_id;
 
+SELECT
+    p.product_id,
+    p.product_name,
+    b.brand_name,
+    c.category_name,
+    p.price,
+    p.stock
+FROM products p
+JOIN brands b ON p.brand_id = b.brand_id
+JOIN categories c ON p.category_id = c.category_id;
+
 
