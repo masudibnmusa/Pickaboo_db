@@ -578,6 +578,10 @@ FROM payments p
 JOIN orders o ON p.order_id = o.order_id
 JOIN customers c ON o.customer_id = c.customer_id;
 
+SELECT p.product_name, pi.image_url
+FROM products p
+JOIN product_images pi ON p.product_id = pi.product_id;
+
 
 
 
