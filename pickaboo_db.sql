@@ -586,5 +586,23 @@ use pickabo_db;
 
 SELECT * FROM customers;
 
+SELECT 
+    customer_name,
+    rder_id
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id;
+
+DESCRIBE customers;
+DESCRIBE orders;
+DESCRIBE payments;
+
+SELECT 
+    c.customer_id,
+    c.name AS customer_name,
+    o.order_id,
+    o.total_amount,
+    o.order_date
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id;
 
 
