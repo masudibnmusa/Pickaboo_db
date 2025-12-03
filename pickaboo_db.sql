@@ -556,5 +556,17 @@ FROM categories c
 LEFT JOIN products p ON c.category_id = p.category_id
 GROUP BY c.category_name;
 
+use pickabo_db;
+SELECT c.name, o.order_id
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id
+
+UNION
+
+SELECT c.name, o.order_id
+FROM customers c
+RIGHT JOIN orders o ON c.customer_id = o.customer_id;
+
+
 
 
