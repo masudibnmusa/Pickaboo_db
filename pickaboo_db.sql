@@ -605,4 +605,13 @@ SELECT
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id;
 
+SELECT
+    o.order_id,
+    oi.order_item_id,
+    oi.product_id,
+    oi.quantity,
+    oi.price
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id;
+
 
