@@ -582,6 +582,9 @@ SELECT p.product_name, pi.image_url
 FROM products p
 JOIN product_images pi ON p.product_id = pi.product_id;
 
+use pickabo_db;
+
+SELECT * FROM customers;
 
 
 
