@@ -639,4 +639,15 @@ SELECT
 FROM products p
 JOIN product_images pi ON p.product_id = pi.product_id;
 
+SELECT
+    c.name AS customer_name,
+    o.order_id,
+    oi.order_item_id,
+    p.product_name,
+    oi.quantity,
+    oi.price
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id;
 
