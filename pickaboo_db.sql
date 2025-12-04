@@ -715,3 +715,8 @@ FROM customers c
 LEFT JOIN orders o ON c.customer_id = o.customer_id
 WHERE o.order_id IS NULL;
 
+SELECT o.order_id, COUNT(oi.order_item_id) AS total_items
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY o.order_id;
+
