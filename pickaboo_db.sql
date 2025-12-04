@@ -671,4 +671,8 @@ SELECT o.order_id, oi.order_item_id, oi.quantity
 FROM orders o
 JOIN order_items oi ON o.order_id = oi.order_id;
 
+SELECT oi.order_id, p.product_name, oi.quantity, oi.price
+FROM order_items oi
+JOIN products p ON oi.product_id = p.product_id;
+
 
