@@ -688,4 +688,8 @@ FROM products p
 JOIN brands b ON p.brand_id = b.brand_id
 JOIN categories c ON p.category_id = c.category_id;
 
+SELECT p.product_name, pi.image_url
+FROM product_images pi
+JOIN products p ON pi.product_id = p.product_id;
+
 
