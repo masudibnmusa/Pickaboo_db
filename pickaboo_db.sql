@@ -692,4 +692,7 @@ SELECT p.product_name, pi.image_url
 FROM product_images pi
 JOIN products p ON pi.product_id = p.product_id;
 
+SELECT DISTINCT p.product_name
+FROM order_items oi
+JOIN products p ON oi.product_id = p.product_id;
 
