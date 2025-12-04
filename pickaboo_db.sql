@@ -720,3 +720,8 @@ FROM orders o
 JOIN order_items oi ON o.order_id = oi.order_id
 GROUP BY o.order_id;
 
+SELECT p.product_name, SUM(oi.quantity) AS sold_quantity
+FROM products p
+JOIN order_items oi ON p.product_id = oi.product_id
+GROUP BY p.product_id;
+
