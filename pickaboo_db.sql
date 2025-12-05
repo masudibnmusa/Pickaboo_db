@@ -750,3 +750,9 @@ FROM orders o
 JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
 JOIN categories c ON p.category_id = c.category_id;
+
+SELECT o.order_id, b.brand_name, p.product_name
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+JOIN brands b ON p.brand_id = b.brand_id;
