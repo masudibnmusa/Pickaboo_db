@@ -799,3 +799,9 @@ SELECT c.district, COUNT(o.order_id) AS total_orders
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 GROUP BY c.district;
+
+SELECT cat.category_name, SUM(oi.quantity) AS total_sold
+FROM categories cat
+JOIN products p ON cat.category_id = p.category_id
+JOIN order_items oi ON p.product_id = oi.product_id
+GROUP BY cat.category_id;
