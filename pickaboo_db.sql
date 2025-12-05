@@ -739,3 +739,8 @@ JOIN (
     FROM orders
     GROUP BY customer_id
 ) t ON o.customer_id = t.customer_id AND o.order_date = t.last_order;
+
+SELECT p.product_name, COUNT(pi.image_id) AS image_count
+FROM products p
+JOIN product_images pi ON p.product_id = pi.product_id
+GROUP BY p.product_id;
