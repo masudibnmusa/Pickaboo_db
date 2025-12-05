@@ -756,3 +756,20 @@ FROM orders o
 JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
 JOIN brands b ON p.brand_id = b.brand_id;
+
+SELECT 
+    c.name AS customer_name,
+    c.phone,
+    o.order_id,
+    o.total_amount,
+    oi.quantity,
+    p.product_name,
+    p.price,
+    b.brand_name,
+    cat.category_name
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+JOIN brands b ON p.brand_id = b.brand_id
+JOIN categories cat ON p.category_id = cat.category_id;
