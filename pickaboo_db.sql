@@ -794,3 +794,8 @@ JOIN order_items oi ON p.product_id = oi.product_id
 GROUP BY p.product_id
 ORDER BY total_sold DESC
 LIMIT 1;
+
+SELECT c.district, COUNT(o.order_id) AS total_orders
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.district;
