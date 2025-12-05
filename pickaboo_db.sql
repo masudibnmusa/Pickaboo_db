@@ -805,3 +805,9 @@ FROM categories cat
 JOIN products p ON cat.category_id = p.category_id
 JOIN order_items oi ON p.product_id = oi.product_id
 GROUP BY cat.category_id;
+
+SELECT b.brand_name, SUM(oi.quantity * oi.price) AS total_revenue
+FROM brands b
+JOIN products p ON b.brand_id = p.brand_id
+JOIN order_items oi ON p.product_id = oi.product_id
+GROUP BY b.brand_id;
