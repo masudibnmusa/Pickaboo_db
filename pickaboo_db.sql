@@ -744,3 +744,9 @@ SELECT p.product_name, COUNT(pi.image_id) AS image_count
 FROM products p
 JOIN product_images pi ON p.product_id = pi.product_id
 GROUP BY p.product_id;
+
+SELECT o.order_id, c.category_name, p.product_name
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+JOIN categories c ON p.category_id = c.category_id;
