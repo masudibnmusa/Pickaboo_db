@@ -725,3 +725,9 @@ FROM products p
 JOIN order_items oi ON p.product_id = oi.product_id
 GROUP BY p.product_id;
 
+use pickabo_db;
+
+SELECT o.order_id, c.name, c.district
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id;
+
