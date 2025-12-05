@@ -773,3 +773,8 @@ JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
 JOIN brands b ON p.brand_id = b.brand_id
 JOIN categories cat ON p.category_id = cat.category_id;
+
+SELECT c.customer_id, c.name, COUNT(o.order_id) AS order_count
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id;
