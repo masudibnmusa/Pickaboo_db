@@ -902,3 +902,18 @@ JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
 JOIN brands b ON p.brand_id = b.brand_id
 JOIN categories c ON p.category_id = c.category_id;
+
+SELECT 
+    c.name AS customer_name,
+    p.product_name,
+    oi.price AS product_price
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+JOIN (
+    SELECT o.customer_id, MAX(oi.price) AS max_price
+    FROM orders o
+    JOIN order_items oi ON o.order_id = oi.order_id
+    GROUP BY o.customer_id
+) t ON t.customer_id = c.customer_id AND t.max_price = oi.price;
