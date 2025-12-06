@@ -884,3 +884,8 @@ JOIN orders o ON c.customer_id = o.customer_id
 JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
 WHERE p.category_id = 2;
+
+SELECT o.order_id, SUM(oi.quantity * oi.price) AS total_revenue
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY o.order_id;
