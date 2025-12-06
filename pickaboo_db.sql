@@ -866,3 +866,9 @@ FROM brands b
 JOIN products p ON b.brand_id = p.brand_id
 GROUP BY b.brand_id
 ORDER BY product_count DESC;
+
+SELECT o.order_id, p.product_name
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+GROUP BY o.order_id;
