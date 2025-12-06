@@ -877,3 +877,10 @@ SELECT p.product_name, COUNT(pi.image_id) AS image_count
 FROM products p
 LEFT JOIN product_images pi ON p.product_id = pi.product_id
 GROUP BY p.product_id;
+
+SELECT DISTINCT c.name
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+WHERE p.category_id = 2;
