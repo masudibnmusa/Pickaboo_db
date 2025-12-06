@@ -839,3 +839,11 @@ FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id;
+
+SELECT cat.category_name, SUM(oi.quantity) AS total_qty
+FROM categories cat
+JOIN products p ON cat.category_id = p.category_id
+JOIN order_items oi ON p.product_id = oi.product_id
+GROUP BY cat.category_id
+ORDER BY total_qty DESC
+LIMIT 1;
