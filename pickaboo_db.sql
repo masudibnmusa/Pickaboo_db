@@ -818,3 +818,13 @@ JOIN orders o ON c.customer_id = o.customer_id
 GROUP BY c.customer_id
 ORDER BY total_spent DESC
 LIMIT 1;
+
+use pickabo_db;
+SELECT c.district, o.order_id, o.order_date
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN (
+    SELECT customer_id, MAX(order_date) AS last_order
+    FROM orders
+    GROUP BY customer_id
+) t ON o.customer_id = t.customer_id AND o.order_date = t.last_order;
