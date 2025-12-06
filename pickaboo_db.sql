@@ -917,3 +917,14 @@ JOIN (
     JOIN order_items oi ON o.order_id = oi.order_id
     GROUP BY o.customer_id
 ) t ON t.customer_id = c.customer_id AND t.max_price = oi.price;
+
+SELECT 
+    c.name,
+    COUNT(DISTINCT cat.category_id) AS total_categories
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+JOIN categories cat ON p.category_id = cat.category_id
+GROUP BY c.customer_id
+HAVING COUNT(DISTINCT cat.category_id) > 1;
