@@ -828,3 +828,8 @@ JOIN (
     FROM orders
     GROUP BY customer_id
 ) t ON o.customer_id = t.customer_id AND o.order_date = t.last_order;
+
+SELECT o.order_id, SUM(oi.quantity) AS total_items
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY o.order_id;
